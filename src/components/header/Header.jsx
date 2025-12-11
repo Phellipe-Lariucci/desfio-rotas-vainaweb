@@ -1,16 +1,17 @@
-import homeStyle from "./homeStyle.scss";
 import { Link } from "react-router-dom";
+import s from "./header.module.scss";
+import Logo from "../../assets/logo.png";
 
 const Header = () => {
   return (
-    <header className={homeStyle.header}>
-      <div>
-        <img src="" alt="" />
-        <Link to="/">Médicos e Dentistas</Link>
+    <header className={s.header}>
+      <div className={s.BoxLogo}>
+        <img src={Logo} alt="Imagem de logo do site Médicos Voluntários" />
+        <Link to="/">Médicos & Dentistas</Link>
       </div>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/voluntario">Seja Voluntario</Link>
+        <Link to="/voluntario">Seja Voluntário</Link>
       </nav>
     </header>
   );

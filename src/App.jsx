@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import "./globalStyle.scss";
 import Home from "./pages/home/Home";
 import Voluntario from "./pages/voluntario/Voluntario";
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/voluntario" element={<Voluntario />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

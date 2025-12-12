@@ -63,6 +63,30 @@ const Home = () => {
           </article>
         </div>
       </section>
+      <section className={s.sectionImpacto}>
+        <h2>Nosso Impacto</h2>
+        <p>
+          Transformando a saúde de nossa comunidade, um paciente de cada vez
+        </p>
+        <div className={s.cardsImpacto}>
+          <article>
+            <h3>2,500 +</h3>
+            <p>Pessoas Atendidas</p>
+          </article>
+          <article>
+            <h3>150 +</h3>
+            <p>Profissionais Voluntários</p>
+          </article>
+          <article>
+            <h3>98%</h3>
+            <p>Satisfação dos Pacientes</p>
+          </article>
+          <article>
+            <h3>5 +</h3>
+            <p>Anos de Dedicação</p>
+          </article>
+        </div>
+      </section>
     </main>
   );
 };

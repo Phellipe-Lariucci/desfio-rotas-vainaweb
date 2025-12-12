@@ -1,3 +1,9 @@
+:root {
+  --corDestaque: #00745a;
+  --corTitulo: #000;
+  --corParagrafo: #444;
+}
+
 .section {
   display: flex;
   align-items: center;
@@ -7,24 +13,27 @@
 
   .conteudo {
     max-width: 480px;
+    display: flex;
+    flex-flow: row wrap;
 
     h1 {
       font-size: 3rem;
       font-weight: 700;
       line-height: 1.1;
       margin: 1.5rem 0;
-      color: #000;
+      color: var(--corTitulo);
     }
 
     p {
       font-size: 1.125rem;
-      color: #444;
+      color: var(--corParagrafo);
       line-height: 1.6;
       margin-bottom: 2rem;
     }
 
     .buttons {
       display: flex;
+      flex-flow: row wrap;
       gap: 2rem;
 
       .btnUm {
@@ -33,28 +42,145 @@
         text-decoration: none;
         font-weight: 500;
         font-size: 1rem;
-        background: #00745a;
+        background: var(--corDestaque);
         color: #fff;
+        min-width: 150px;
 
         &:hover {
-          background-color: #02634c;
+          background-color: var(--corDestaque);
         }
       }
 
       .btnDois {
         padding: 12px 24px;
         border-radius: 8px;
+        min-width: 150px;
         text-decoration: none;
         font-weight: 500;
         font-size: 1rem;
-        border: 2px solid #00745a;
-        color: #00745a;
+        border: 2px solid var(--corDestaque);
+        color: var(--corDestaque);
       }
     }
   }
 }
 section.sectionMissao {
-  background-color: #00745a;
+  background-color: var(--corDestaque);
   color: white;
-  padding: 50px;
+  padding: 60px;
+
+  h2 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+  }
+  p {
+    font-size: 23px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+  }
+}
+.boxCards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+
+  article {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 450px;
+    min-width: 200px;
+    min-height: 242px;
+    padding: 20px 10px 10px 10px;
+    transition: 0.7s ease;
+    h3 {
+      font-size: 30px;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 20px;
+      margin-left: 0px;
+      text-align: center;
+      padding: 0px 60px;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+.sectionImpacto {
+  background-color: white;
+  padding: 60px;
+  h2 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    color: var(--corTitulo);
+  }
+  p {
+    font-size: 23px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    color: var(--corParagrafo);
+  }
+
+  .cardsImpacto {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+
+    article {
+      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.664);
+      border-radius: 10px;
+      width: 300px;
+      height: 200px;
+      transition: 0.7s ease;
+      h3 {
+        font-size: 50px;
+        color: var(--corDestaque);
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 60px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 20px;
+        margin-left: 0px;
+        text-align: center;
+        padding: 0px 60px;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .section {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+    .conteudo {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-items: center;
+      justify-content: center;
+      max-width: none;
+      width: 100%;
+      h1 {
+        text-align: center;
+      }
+    }
+    .doutorImgBox {
+      display: none;
+    }
+  }
 }

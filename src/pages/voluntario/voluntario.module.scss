@@ -1,0 +1,136 @@
+:root {
+  --corDestaque: #00745a;
+  --corHover: #008a6c;
+  --corTitulo: #000;
+  --corParagrafo: #444;
+}
+
+.voluntario {
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 40px;
+    color: var(--corTitulo);
+  }
+  h2 {
+    color: var(--corParagrafo);
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 40px;
+    gap: 30px;
+    article {
+      border: 1px solid black;
+      border-radius: 10px;
+      width: 400px;
+      min-height: 150px;
+      display: flex;
+      flex-flow: row wrap;
+      align-content: space-evenly;
+      justify-content: center;
+      transition: 0.7s ease;
+      h3 {
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+      }
+      p {
+        font-size: 20px;
+        text-align: center;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+.dados {
+  background-color: var(--corDestaque);
+  padding: 60px;
+
+  .formulario {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 850px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    fieldset {
+      border: none;
+    }
+  }
+
+  .inputs {
+    display: flex;
+    gap: 20px;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+    input {
+      flex: 1;
+      max-width: 100%;
+
+      padding: 12px 15px;
+      font-size: 0.95rem;
+      color: #000;
+
+      border: 1.5px solid #c9c9c9;
+      border-radius: 6px;
+
+      background-color: #fafafa;
+      outline: none;
+      transition: 0.2s ease;
+      &:focus {
+        border-color: var(--corDestaque);
+        background-color: #fff;
+        box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.25);
+      }
+
+      &::placeholder {
+        color: #a9a9a9;
+      }
+    }
+    .numero {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+
+  .textarea {
+    width: 100%;
+    height: 140px;
+
+    padding: 12px 15px;
+    font-size: 0.95rem;
+
+    border: 1.5px solid #c9c9c9;
+    border-radius: 6px;
+    background-color: #fafafa;
+    &:focus {
+      border-color: var(--corDestaque);
+      background-color: #fff;
+      box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.25);
+    }
+  }
+
+  .botao {
+    background-color: var(--corDestaque);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s ease;
+    margin: 20px auto 0;
+    display: block;
+    &:hover {
+      background-color: var(--corHover);
+    }
+  }
+}

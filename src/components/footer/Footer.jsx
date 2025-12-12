@@ -27,7 +27,7 @@ const Footer = () => {
             <p>(11) 3000-0000</p>
           </div>
           <div>
-            <img src={Telefone} alt="simbolo de localização" />
+            <img src={Localizacao} alt="simbolo de localização" />
             <p>São Paulo, Brasil</p>
           </div>
         </div>

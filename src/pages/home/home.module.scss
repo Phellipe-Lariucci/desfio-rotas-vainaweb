@@ -1,5 +1,6 @@
 :root {
   --corDestaque: #00745a;
+  --corHover: #008a6c;
   --corTitulo: #000;
   --corParagrafo: #444;
 }
@@ -45,9 +46,10 @@
         background: var(--corDestaque);
         color: #fff;
         min-width: 150px;
-
+        transition: 0.7s ease;
         &:hover {
-          background-color: var(--corDestaque);
+          background-color: var(--corHover);
+          transform: scale(1.05);
         }
       }
 
@@ -60,6 +62,12 @@
         font-size: 1rem;
         border: 2px solid var(--corDestaque);
         color: var(--corDestaque);
+        transition: 0.7s ease;
+        &:hover {
+          color: white;
+          background-color: var(--corHover);
+          transform: scale(1.05);
+        }
       }
     }
   }
